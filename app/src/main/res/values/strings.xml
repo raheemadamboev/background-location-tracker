@@ -4,4 +4,6 @@
     <!-- LocationNotification -->
     <string name="tracking_location">Tracking location…</string>
     <string name="your_location">Location: (%1$s, %2$s)</string>
+    <string name="location_tracker">Location tracker</string>
+    <string name="location_tracker_description">This channel is used to show notification when tracking location.</string>
 </resources>
