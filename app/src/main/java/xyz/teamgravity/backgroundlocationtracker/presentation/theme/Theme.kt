@@ -1,4 +1,4 @@
-package xyz.teamgravity.backgroundlocationtracker.ui.theme
+package xyz.teamgravity.backgroundlocationtracker.presentation.theme
 
 import android.app.Activity
 import android.os.Build

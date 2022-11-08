@@ -1,4 +1,4 @@
-package xyz.teamgravity.backgroundlocationtracker.ui.theme
+package xyz.teamgravity.backgroundlocationtracker.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 
