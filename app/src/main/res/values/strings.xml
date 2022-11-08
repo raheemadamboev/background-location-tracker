@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Background Location Tracker</string>
+
+    <!-- LocationNotification -->
+    <string name="tracking_location">Tracking location…</string>
+    <string name="your_location">Location: (%1$s, %2$s)</string>
 </resources>
