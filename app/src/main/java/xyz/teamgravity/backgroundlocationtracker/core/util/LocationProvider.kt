@@ -7,5 +7,5 @@ interface LocationProvider {
 
     fun getLocation(interval: Long): Flow<Location>
 
-    class LocationException(message: String) : Exception()
+    class LocationException(message: String) : Exception(message)
 }
