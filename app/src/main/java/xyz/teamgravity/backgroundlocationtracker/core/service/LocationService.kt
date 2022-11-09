@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.lifecycle.LifecycleService
 import androidx.lifecycle.lifecycleScope
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
@@ -25,6 +26,8 @@ class LocationService : LifecycleService() {
 
     @Inject
     lateinit var location: LocationProvider
+
+    private var locationJob: Job? = null
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         when (intent?.action) {
@@ -53,7 +56,8 @@ class LocationService : LifecycleService() {
     }
 
     private fun observeLocation() {
-        lifecycleScope.launch {
+        locationJob?.cancel()
+        locationJob = lifecycleScope.launch {
             location.getLocation(INTERVAL)
                 .catch { it.printStackTrace() }
                 .collectLatest { location ->
