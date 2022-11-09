@@ -22,7 +22,7 @@ class LocationNotification(
         NotificationCompat.Builder(context, CHANNEL_ID)
             .setContentTitle(context.getString(R.string.tracking_location))
             .setContentText(context.getString(R.string.your_location, "-", "-"))
-            .setSmallIcon(R.drawable.ic_launcher_background)
+            .setSmallIcon(R.drawable.ic_location)
             .setOngoing(true)
     }
 
